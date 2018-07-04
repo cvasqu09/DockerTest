@@ -25,4 +25,11 @@ router.post('/', (req, res, next) => {
 
 })
 
+router.get('/', (req, res, next) => {
+	console.log('Someone tried retrieving.');
+	return res.status(200).json({
+		'message': 'Your potats are expired'
+	})
+})
+
 module.exports = router;
